@@ -1,4 +1,80 @@
 body {
   font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
   margin: 0;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* html --> body --> full-flex --> main --> card-deck */
+html {
+  height: 100%;
+}
+
+main {
+  display: flex;
+  flex: 1;
+}
+
+.full-flex {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+/* holding the flexbox */
+.card-deck{
+  display: flex;
+  height: 100%;
+}
+
+/* shared padding */
+.card-deck section {
+  padding: 1em;
+}
+
+
+.description {
+  flex-basis: 240px;
+}
+
+/* flex shortcut: grow, shrink, basis */
+.cards {
+  flex: 1;
+  background-color: #eee;
+}
+
+.final{
+  flex-basis: 180px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.card-series {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  flex: 0 0 250px;
+  background-color: white;
+  margin: .5rem;
+  padding: .5rem; 
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16)
+  , 0 1px 3px rgba(0, 0, 0, 0.23);
+}
+
+/* shortcut for padding: top, right, bottom, left */
+.card p {
+  padding: .5rem 1rem;
+}
+
+.card img {
+  border-radius: 10px 10px 0 0;
 }
